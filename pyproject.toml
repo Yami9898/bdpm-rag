@@ -1,0 +1,9 @@
+[project]
+name = "bdpm-rag"
+version = "0.1.0"
+description = "RAG local sur la Base de Données Publique des Médicaments (Ollama, Qdrant, LangGraph)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

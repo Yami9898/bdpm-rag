@@ -1,0 +1,5 @@
+60001001	comprimé	02202	PARACÉTAMOL	1000 mg	un comprimé	SA	1
+60001002	comprimé	40311	RIVAROXABAN	20 mg	un comprimé	SA	1
+60001003	solution	88541	SÉMAGLUTIDE	1 mg	une dose	SA	1
+60001004	comprimé	02202	PARACÉTAMOL	1000 mg	un comprimé	SA	1
+60001004	comprimé	02202	EXCIPIENT X			FT	1

@@ -1,0 +1,3 @@
+60001002	CT-1	Inscription (CT)	20090101	Important	Le service médical rendu par XARELTO est important dans la prévention des événements thromboemboliques veineux.
+60001002	CT-2	Renouvellement d'inscription (CT)	20190615	Important	Le service médical rendu par XARELTO reste important dans ses indications.
+60001003	CT-3	Inscription (CT)	20190301	Important	Le SMR d'OZEMPIC est important dans le traitement du diabète de type 2 insuffisamment contrôlé.

@@ -1,0 +1,8 @@
+langgraph>=1.0
+qdrant-client>=1.12
+ollama>=0.4
+pandas>=2.0
+requests>=2.31
+streamlit>=1.40
+python-dotenv>=1.0
+pytest>=8.0

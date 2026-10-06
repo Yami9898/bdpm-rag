@@ -1,0 +1,3 @@
+60001003	liste I
+60001003	prescription initiale hospitalière annuelle
+60001002	liste I

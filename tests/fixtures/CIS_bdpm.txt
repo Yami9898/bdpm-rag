@@ -1,0 +1,5 @@
+60001001	DOLIPRANE 1000 mg, comprimé	comprimé	orale	Autorisation active	Procédure nationale	Commercialisée	01/02/1999			OPELLA HEALTHCARE FRANCE	Non
+60001002	XARELTO 20 mg, comprimé pelliculé	comprimé pelliculé	orale	Autorisation active	Procédure centralisée	Commercialisée	30/09/2008		EU/1/08/472	BAYER AG	Non
+60001003	OZEMPIC 1 mg, solution injectable en stylo prérempli	solution injectable	sous-cutanée	Autorisation active	Procédure centralisée	Commercialisée	08/02/2018	Alerte	EU/1/17/1251	NOVO NORDISK A/S	Oui
+60001004	PARACETAMOL BIOGARAN 1000 mg, comprimé	comprimé	orale	Autorisation active	Procédure nationale	Commercialisée	12/03/2005			BIOGARAN	Non
+60001005	ANCIENMED 5 mg, gélule	gélule	orale	Autorisation abrogée	Procédure nationale	Non commercialisée	01/01/1990			LABO X	Non
