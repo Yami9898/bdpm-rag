@@ -1,4 +1,6 @@
-# 💊 BDPM-RAG — assistant médicament sourcé et 100 % local
+# BDPM-RAG — assistant médicament sourcé et 100 % local
+
+*Français · [English](README.en.md)*
 
 Assistant de questions-réponses sur le médicament, construit sur la **Base de Données Publique des
 Médicaments** (BDPM, ANSM / HAS / Assurance Maladie). Il répond **uniquement** à partir des données
@@ -8,7 +10,7 @@ n'est pas dans la base.
 Tout tourne en local : LLM et embeddings via **Ollama**, index vectoriel **Qdrant**, orchestration
 **LangGraph**. Aucune donnée ne quitte la machine, une exigence fréquente dans le domaine de la santé.
 
-> ⚠️ Démonstrateur technique : ne remplace ni le RCP ni l'avis d'un professionnel de santé.
+> **Avertissement** : démonstrateur technique : ne remplace ni le RCP ni l'avis d'un professionnel de santé.
 
 **Stack** : Python · Ollama (`bge-m3`, `mistral`) · Qdrant · LangGraph · Streamlit · pytest · GitHub Actions
 
@@ -159,22 +161,22 @@ La recherche hybride corrige précisément les cas où le dense échoue sur un n
 
 ### Exemples de réponses générées (Mistral 7B, corpus complet)
 
-**« Levothyrox est-il un princeps ou un générique ? »** ✅
+**« Levothyrox est-il un princeps ou un générique ? »** (correct)
 > Levothyrox est le princeps des médicaments LEVOTHYROXINE SODIQUE 50, 100, 125, 150, 175 et
 > 200 microgrammes, comprimé sécable […] [1][2][3][4][6]
 
-**« Quel est le service médical rendu de Xarelto ? »** ✅
+**« Quel est le service médical rendu de Xarelto ? »** (correct)
 > Le service médical rendu de Xarelto (rivaroxaban) est important dans le traitement des thromboses
 > veineuses profondes et embolies pulmonaires […] [1][2][3][4][5]
 > En outre, Xarelto 2,5 mg […] est faible uniquement chez les patients adultes présentant une
 > artériopathie oblitérante des membres inférieurs sévère […] [6]
 
-**« Quelle est la posologie du Doliprane chez l'enfant ? »** ✅ abstention correcte, car les
-posologies ne sont pas dans les données indexées
+**« Quelle est la posologie du Doliprane chez l'enfant ? »** (abstention correcte, car les
+posologies ne sont pas dans les données indexées)
 > Je ne trouve pas d'information suffisante dans la Base de Données Publique des Médicaments pour
 > répondre à cette question. […]
 
-**« Quelles sont les conditions de prescription d'Ozempic ? »** ⚠️ réponse à côté
+**« Quelles sont les conditions de prescription d'Ozempic ? »** (réponse à côté)
 > Le modèle détaille les **indications** remboursées tirées des avis SMR, alors que la bonne réponse
 > (« **liste I** ») figurait dans l'extrait [2]. La recherche a fonctionné ; c'est la génération
 > qui s'est trompée de focus (voir *Limites*).
