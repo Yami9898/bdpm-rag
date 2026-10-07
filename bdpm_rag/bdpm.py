@@ -52,11 +52,14 @@ def download(raw_dir: Path, base_url: str, force: bool = False) -> None:
 
 
 def _decode(raw: bytes) -> str:
-    # Les fichiers BDPM ont historiquement été publiés en ISO-8859-1, plus récemment en UTF-8.
-    try:
-        return raw.decode("utf-8")
-    except UnicodeDecodeError:
-        return raw.decode("latin-1")
+    # Les fichiers BDPM sont publiés en UTF-8 ou en Windows-1252 (apostrophe typographique 0x92,
+    # « œ » 0x9C…) ; latin-1 en dernier recours pour les octets non définis en cp1252.
+    for encoding in ("utf-8", "cp1252"):
+        try:
+            return raw.decode(encoding)
+        except UnicodeDecodeError:
+            pass
+    return raw.decode("latin-1")
 
 
 def read_table(path: Path, columns: list[str]) -> pd.DataFrame:

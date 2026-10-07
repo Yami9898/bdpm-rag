@@ -68,6 +68,13 @@ def test_parsing_latin1_et_colonnes(tables):
     assert list(cis.columns) == bdpm.SCHEMAS["CIS_bdpm.txt"]
 
 
+def test_decodage_cp1252():
+    # Fichiers BDPM réels : apostrophe typographique (0x92) et « œ » (0x9C) en Windows-1252
+    raw = "Le SMR est important dans l’indication ; cœur".encode("cp1252")
+    assert bdpm._decode(raw) == "Le SMR est important dans l’indication ; cœur"
+    assert bdpm._decode("médical".encode("utf-8")) == "médical"
+
+
 def test_chunks_fiche_et_smr(chunks):
     ids = {c.id for c in chunks}
     assert "60001005:fiche" not in ids  # non commercialisé exclu
